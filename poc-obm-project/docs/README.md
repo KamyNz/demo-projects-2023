@@ -12,4 +12,4 @@
 
 🔗 **[Explore the Social Sensor in Spanish Here](https://poc-obm.caobalab.co/)**
 
-![Social_sensor_png](./docs/Sensor_social.png)
+![Social_sensor_png](./docs/Social_sensor_png.png)
