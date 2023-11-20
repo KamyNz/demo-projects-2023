@@ -16,4 +16,4 @@
 
 ## Involved as Cloud Engineer for the Cloud Architecture of Social Sensor Project (Explanation in Spanish)
 
-![Architecture](./docs/readme/Architecture-POC-OBM-POC-OBM-Final-JORGE-V1.drawio.png))
+![Architecture](./docs/readme/Architecture-POC-OBM-POC-OBM-Final-JORGE-V1.drawio.png)
