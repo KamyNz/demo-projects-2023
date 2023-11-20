@@ -59,11 +59,11 @@ resource "aws_security_group" "dev-efi-sg" {
   vpc_id      = aws_vpc.dev-efi-vpc.id
 
   ingress {
-    description      = "SSH"
-    from_port        = 22
-    to_port          = 22
-    protocol         = "tcp"
-    cidr_blocks      = ["181.139.218.139/32"]
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["XXX.XXX.XXX.XXX/32"]
   }
 
   egress {
@@ -109,11 +109,11 @@ resource "aws_instance" "mlflow-demo-tf" {
     command = templatefile("${var.host_os}-ssh-config.tpl", {
       hostname     = self.public_ip,
       user         = "ubuntu",
-      identityfile = "/Users/camilamv/Documents/Learning/04-CommunityEvents/demo-terraform-2023/terraform-mlflow/project-v3/main-tf-cmartinez-keypair.pem"
+      identityfile = "/Users/camilamv/Documents/Learning/04-CommunityEvents/demo-terraform-2023/awscday2023-terraform-mlflow/project/main-tf-cmartinez-keypair.pem"
 
     })
     #interpreter = [ "", ""] #No need in mac, it will default in OS.
-    interpreter = var.host_os == "windows" ? ["Powershell", "-Command"] :[ "bash","-c"]
+    interpreter = var.host_os == "windows" ? ["Powershell", "-Command"] : ["bash", "-c"]
 
   }
 }
