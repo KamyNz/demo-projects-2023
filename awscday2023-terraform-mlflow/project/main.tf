@@ -64,6 +64,7 @@ resource "aws_security_group" "dev-efi-sg" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["XXX.XXX.XXX.XXX/32"]
+
   }
 
   egress {

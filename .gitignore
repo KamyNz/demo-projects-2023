@@ -5,6 +5,8 @@ awscday2023-terraform-mlflow/project/terraform.tfstate
 awscday2023-terraform-mlflow/project/dev.tfvars
 *.pem
 .terraform.lock.hcl
+awscday2023-terraform-mlflow/project/main.tf
+awscday2023-terraform-mlflow/project-mlflow/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,terraform,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,terraform,macos
