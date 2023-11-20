@@ -12,7 +12,7 @@
 
 🔗 **[Explore the Social Sensor in Spanish Here](https://poc-obm.caobalab.co/)**
 
-![Social_sensor_png](/poc-obm-project/docs/readme/Social_sensor_png.png)
+![Social_sensor_png](./docs/readme/Architecture-POC-OBM-POC-OBM-Final-JORGE-V1.drawio.png)
 
 ## Involved as Cloud Engineer for the Cloud Architecture of Social Sensor Project (Explanation in Spanish)
 
