@@ -17,7 +17,7 @@ terraform destroy
 terraform state list
 
 #To show specific content of a resource list
-terraform state show aws_eip.one
+terraform state show <example: aws_eip.one>
 
 terraform output
 terraform refresh
@@ -26,7 +26,7 @@ terraform refresh
 terraform apply -target <whole resource id>
 
 #To apply changes to specific target, you can get this after running terraform state list
-terraform apply --replace aws_instance.mlflow-demo-tf
+terraform apply --replace <whole_resource_object>
 
 #To apply
 terraform apply -refresh-only
