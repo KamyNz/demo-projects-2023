@@ -1,4 +1,4 @@
-data "aws_ami" "mlflow-demo-tf" {
+data "aws_ami" "mlflow-server-awscday" {
   most_recent = true
   owners      = ["099720109477"] # Ojo, this must be between ""
 
@@ -8,5 +8,3 @@ data "aws_ami" "mlflow-demo-tf" {
   }
 
 }
-
-
