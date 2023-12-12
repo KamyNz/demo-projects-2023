@@ -13,6 +13,9 @@ This Terraform script provisions an AWS infrastructure with specific resources:
 5. **Security Group**: Sets up a security group allowing SSH access from a specific IP and unrestricted outbound traffic.
 6. **EC2 Instance**: Deploys an EC2 instance in the public subnet, utilizing specified AMI, security group, and key pair.
 
+## Architecture for Terraform Project
+
+![Architecture_png](./docs/Arquitecturav2.png.png)
 
 ## Installation 🚀
 
