@@ -1,1 +1,1 @@
-# demo-terraform-2023
+# demo-projects-2023
