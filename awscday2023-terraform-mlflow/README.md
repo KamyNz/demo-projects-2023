@@ -15,7 +15,7 @@ This Terraform script provisions an AWS infrastructure with specific resources:
 
 ## Architecture for Terraform Project
 
-![Architecture_png](./docs/Arquitecturav2.png.png)
+![Architecture_png](./docs/Arquitecturav2.png)
 
 ## Installation 🚀
 
