@@ -1,0 +1,60 @@
+#Using module NETWORKING
+module "networking" {
+  source                    = "./networking"
+  owner                     = var.owner
+  OTU                       = var.OTU
+  cidr_block                = var.cidr_block
+  enable_dns_support        = var.enable_dns_support
+  enable_dns_hostnames      = var.enable_dns_hostnames
+  cidr_block_public         = var.cidr_block_public
+  map_public_ip_on_launch   = var.map_public_ip_on_launch
+  availability_zone_public  = var.availability_zone_public
+  cidr_block_private        = var.cidr_block_private
+  availability_zone_private = var.availability_zone_private
+}
+
+#Using module EC2
+module "ec2" {
+  source                               = "./ec2"
+  owner                                = var.owner
+  OTU                                  = var.OTU
+  aws_iam_role_name                    = var.aws_iam_role_name
+  aws_iam_instance_profile_name        = var.aws_iam_instance_profile_name
+  aws_iam_policy_attachment_name       = var.aws_iam_policy_attachment_name
+  aws_iam_policy_attachment_policy_arn = var.aws_iam_policy_attachment_policy_arn
+  aws_instance_type                    = var.aws_instance_type
+  aws_instance_key_name                = var.aws_instance_key_name
+}
+
+# #Using module ALB
+# module "alb" {
+#   source                          = "./alb"
+#   owner                           = var.owner
+#   OTU                             = var.OTU
+#   aws_lb_name                     = var.aws_lb_name
+#   internal                        = var.internal
+#   load_balancer_type              = var.load_balancer_type
+#   aws_lb_target_group_name        = var.aws_lb_target_group_name
+#   aws_lb_target_group_port        = var.aws_lb_target_group_port
+#   aws_lb_target_group_protocol    = var.aws_lb_target_group_protocol
+#   aws_lb_target_group_target_type = var.aws_lb_target_group_type
+#   aws_lb_listener_port            = var.aws_lb_listener_port
+#   aws_lb_listener_protocol        = var.aws_lb_listener_protocol
+# }
+
+# module "s3" {
+#   source             = "./s3"
+#   owner              = var.owner
+#   OTU                = var.OTU
+#   aws_s3_bucket_name = var.aws_s3_bucket_name
+#   aws_s3_bucket_acl  = var.aws_s3_bucket_acl
+
+# }
+
+#TODO, use module ec2 for:
+# IAM Role Configuration for EC2 Instance
+# Security Group for EC2 Instance
+# EC2 Instance Configuration
+# Application Load Balancer Configuration
+# Target Group Configuration for ALB
+# ALB Listener for HTTP and HTTPS
