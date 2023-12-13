@@ -113,6 +113,9 @@ terraform state list
 # Show specific content of a resource
 terraform state show <example: aws_eip.one>
 
+# To remove a 
+terraform state rm '<resource-name after tf state list>' # Use between single '', if resource name has "". Example: terraform state rm 'aws_iam_user.example["alice"]'
+
 # Show Terraform outputs
 terraform output
 ```
