@@ -4,7 +4,7 @@ variable "owner" {
 
 variable "OTU" {
   description = "Owner of the app"
-  default = "aas-demo"
+  default     = "aas-demo"
 }
 
 variable "aws_s3_bucket_name" {
@@ -13,4 +13,4 @@ variable "aws_s3_bucket_name" {
 
 variable "aws_s3_bucket_acl" {
   default = "private"
-  }
+}

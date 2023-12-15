@@ -1,12 +1,12 @@
 #Variables for networking module
 variable "owner" {
   description = "Owner of the app"
-  default = "cmartinez"
+  default     = "cmartinez"
 }
 
 variable "OTU" {
   description = "Organizational Unit"
-  default = "aas-demo"
+  default     = "aas-demo"
 }
 
 variable "cidr_block" {

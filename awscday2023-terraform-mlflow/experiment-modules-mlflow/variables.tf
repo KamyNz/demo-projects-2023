@@ -4,7 +4,7 @@
 #Variables for networking module
 variable "owner" {
   description = "Owner of the app"
-  default     = "cmartinez"
+  #default     = "cmartinez" #When using for all modules, it should written
 }
 
 variable "OTU" {

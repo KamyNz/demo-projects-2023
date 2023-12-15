@@ -7,8 +7,8 @@ resource "aws_vpc" "dev-efi-vpc" {
   tags = {
     Name                  = "dev-efimerio-caoba",
     TerminationProtection = "false",
-    Owner = var.owner,
-    OTU = var.OTU
+    Owner                 = var.owner,
+    OTU                   = var.OTU
   }
 }
 
@@ -26,8 +26,8 @@ resource "aws_subnet" "public_subnet" {
   tags = {
     Name                  = "dev-efimerio-caoba-public",
     TerminationProtection = "false",
-    Owner = var.owner,
-    OTU = var.OTU
+    Owner                 = var.owner,
+    OTU                   = var.OTU
   }
 }
 
@@ -44,8 +44,8 @@ resource "aws_subnet" "private_subnet" {
   tags = {
     Name                  = "dev-efimerio-caoba-private",
     TerminationProtection = "false",
-    Owner = var.owner,
-    OTU = var.OTU
+    Owner                 = var.owner,
+    OTU                   = var.OTU
   }
 }
 
@@ -57,8 +57,8 @@ resource "aws_internet_gateway" "gw" {
   tags = {
     Name                  = "dev-efimerio-caoba-igw",
     TerminationProtection = "false",
-    Owner = var.owner,
-    OTU = var.OTU
+    Owner                 = var.owner,
+    OTU                   = var.OTU
   }
 }
 
@@ -68,8 +68,8 @@ resource "aws_route_table" "public_rt" {
   tags = {
     Name                  = "dev-efimerio-caoba-public-rt",
     TerminationProtection = "false",
-    Owner = var.owner,
-    OTU = var.OTU
+    Owner                 = var.owner,
+    OTU                   = var.OTU
   }
 }
 

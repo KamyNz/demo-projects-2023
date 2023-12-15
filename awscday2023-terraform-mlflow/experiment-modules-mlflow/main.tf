@@ -14,8 +14,11 @@ module "networking" {
 }
 
 #Using module EC2
-module "ec2" {
-  source                               = "./ec2"
+module "ec2-alb" {
+  source                               = "./ec2-alb"
+  vpc_id                               = module.networking.vpc_id
+  aws_subnet_public_id                 = module.networking.aws_subnet_public_id
+  aws_subnet_private_id                = module.networking.aws_subnet_private_id
   owner                                = var.owner
   OTU                                  = var.OTU
   aws_iam_role_name                    = var.aws_iam_role_name
@@ -26,35 +29,11 @@ module "ec2" {
   aws_instance_key_name                = var.aws_instance_key_name
 }
 
-# #Using module ALB
-# module "alb" {
-#   source                          = "./alb"
-#   owner                           = var.owner
-#   OTU                             = var.OTU
-#   aws_lb_name                     = var.aws_lb_name
-#   internal                        = var.internal
-#   load_balancer_type              = var.load_balancer_type
-#   aws_lb_target_group_name        = var.aws_lb_target_group_name
-#   aws_lb_target_group_port        = var.aws_lb_target_group_port
-#   aws_lb_target_group_protocol    = var.aws_lb_target_group_protocol
-#   aws_lb_target_group_target_type = var.aws_lb_target_group_type
-#   aws_lb_listener_port            = var.aws_lb_listener_port
-#   aws_lb_listener_protocol        = var.aws_lb_listener_protocol
-# }
+module "s3" {
+  source             = "./s3"
+  owner              = var.owner
+  OTU                = var.OTU
+  aws_s3_bucket_name = var.aws_s3_bucket_name
+  aws_s3_bucket_acl  = var.aws_s3_bucket_acl
 
-# module "s3" {
-#   source             = "./s3"
-#   owner              = var.owner
-#   OTU                = var.OTU
-#   aws_s3_bucket_name = var.aws_s3_bucket_name
-#   aws_s3_bucket_acl  = var.aws_s3_bucket_acl
-
-# }
-
-#TODO, use module ec2 for:
-# IAM Role Configuration for EC2 Instance
-# Security Group for EC2 Instance
-# EC2 Instance Configuration
-# Application Load Balancer Configuration
-# Target Group Configuration for ALB
-# ALB Listener for HTTP and HTTPS
+}
