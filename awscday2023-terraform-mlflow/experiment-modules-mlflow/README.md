@@ -1,6 +1,21 @@
-# 🚀 Terraform Project with Modules 🛠️
+# 🚀 Terraform Project with Modules for Implementing MLflow in your ML experiments at low cost from EC2 (AWS Community Day Conference Demo) 🛠️
 
 This Terraform project demonstrates the use of modules to create a network infrastructure and deploy EC2 instances, an Application Load Balancer (ALB), and an S3 bucket. It sets up networking configurations, EC2 instances with ALB, and an S3 bucket within an AWS environment.
+
+## Introduction 🚀
+
+This Terraform script provisions an AWS infrastructure with specific resources:
+
+1. **VPC**: Creates a Virtual Private Cloud (VPC) with DNS support and specified CIDR block.
+2. **Subnet**: Establishes a public subnet within the VPC, allowing public IP assignment.
+3. **Internet Gateway**: Connects the VPC to the internet for public access.
+4. **Route Table & Association**: Defines a custom route table and associates it with the public subnet.
+5. **Security Group**: Sets up a security group allowing SSH access from a specific IP and unrestricted outbound traffic.
+6. **EC2 Instance**: Deploys an EC2 instance in the public subnet, utilizing specified AMI, security group, and key pair.
+
+## Architecture for Terraform Project
+
+![Architecture_png](./docs/Arquitecturav2.png)
 
 ## Project Structure
 
