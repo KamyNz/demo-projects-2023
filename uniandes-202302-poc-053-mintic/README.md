@@ -8,7 +8,7 @@
 
 ![Architecture](./docs/readme/00architecture_azure.png)
 
-## Involved in adjusting the DevOps process 
+## Involved in adjusting the DevOps process (Spanish)
 
 ![DevOps-Process](./docs/readme/01devop_process.png)
 
